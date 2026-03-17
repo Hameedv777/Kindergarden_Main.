@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}School Management{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { background: #f0f8ff; font-family: Arial, sans-serif; padding: 20px; }
+        .welcome-card { padding: 20px; background: white; border-radius: 10px; box-shadow: 0px 0px 10px #a3cfff; }
+        .dashboard-btn { padding: 20px; font-size: 1.1rem; }
+        footer { margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Logout -->
+    <div class="container mt-3 mb-4 d-flex justify-content-end">
+        <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 pt-4 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>School Management</h5>
+                    <p>Manage students, attendance, fees, and homework easily.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'home' %}" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="{% url 'parent_child' %}" class="text-white text-decoration-none">Child Details</a></li>
+                        <li><a href="{% url 'parent_homework' %}" class="text-white text-decoration-none">Homework</a></li>
+                        <li><a href="{% url 'parent_fees' %}" class="text-white text-decoration-none">Fees</a></li>
+                        <li><a href="{% url 'parent_attendance' %}" class="text-white text-decoration-none">Attendance</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@school.com</p>
+                    <p>Phone: +91 9876543210</p>
+                    <div>
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">&copy; {{ current_year }} School Management System. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

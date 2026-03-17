@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block n_subjects %}active{% endblock %}
+{% block breadcrumb %}
+  <a href="{% url 'subject_list' %}">Subjects</a>
+  <span class="bc-sep">›</span>
+  <span class="bc-cur">{{ title }}</span>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">{{ title }}</h1>
+    <p class="page-sub">{% if editing %}Update subject details{% else %}Add a new subject to the system{% endif %}</p>
+  </div>
+</div>
+
+<div class="card" style="max-width:540px">
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-grid" style="margin-bottom:16px">
+        <div class="form-group">
+          <label>Subject name *</label>
+          <input type="text" name="name" value="{{ subject.name|default:'' }}" placeholder="e.g. Mathematics" required/>
+        </div>
+        <div class="form-group">
+          <label>Subject code *</label>
+          <input type="text" name="code" value="{{ subject.code|default:'' }}" placeholder="e.g. MAT" required/>
+        </div>
+        <div class="form-group">
+          <label>Max marks</label>
+          <input type="number" name="max_marks" value="{{ subject.max_marks|default:100 }}" min="1" required/>
+        </div>
+        <div class="form-group">
+          <label>Class / Section <span class="muted">(optional)</span></label>
+          <select name="class_section">
+            <option value="">All classes</option>
+            {% for c in classes %}
+            <option value="{{ c.pk }}" {% if subject.class_section_id == c.pk %}selected{% endif %}>{{ c }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <hr/>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">{% if editing %}Save changes{% else %}Add subject{% endif %}</button>
+        <a href="{% url 'subject_list' %}" class="btn btn-outline">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

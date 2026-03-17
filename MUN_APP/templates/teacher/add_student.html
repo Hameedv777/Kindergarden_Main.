@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4>Add Student</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <form method="POST">
+                        {% csrf_token %}
+
+                        <!-- Student Name -->
+                        <div class="mb-3">
+                            <label class="form-label">Student Name</label>
+                            <input type="text" name="name" class="form-control" required>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="mb-3">
+                            <label class="form-label">Date of Birth</label>
+                            <input type="date" name="dob" class="form-control" required>
+                        </div>
+
+                        <!-- Class -->
+                        <div class="mb-3">
+                            <label class="form-label">Class</label>
+                            <select id="classSelect" class="form-select" required>
+                                <option value="">Select Class</option>
+                                <option value="LKG">LKG</option>
+                                <option value="UKG">UKG</option>
+                            </select>
+                        </div>
+
+                        <!-- Section -->
+                        <div class="mb-3">
+                            <label class="form-label">Section</label>
+                            <select name="class_section" id="sectionSelect" class="form-select" required>
+                                <option value="">Select Section</option>
+                            </select>
+                        </div>
+
+                        <!-- Parent Phone -->
+                        <div class="mb-3">
+                            <label class="form-label">Parent Phone</label>
+                            <input type="text" id="parentPhone" name="parent_phone" 
+                                   class="form-control" pattern="[0-9]{10}" required>
+                        </div>
+
+                        <!-- Parent Name -->
+                        <div class="mb-3">
+                            <label class="form-label">Parent Name</label>
+                            <input type="text" id="parentName" name="parent_name" 
+                                   class="form-control" readonly>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">
+                                Add Student
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // --- CLASS / SECTION LOGIC ---
+    const classSelect = document.getElementById("classSelect");
+    const sectionSelect = document.getElementById("sectionSelect");
+
+    const classSections = [
+        {% for cs in class_sections %}
+        {
+            id: "{{ cs.id }}",
+            class_name: "{{ cs.class_name }}",
+            section: "{{ cs.section }}"
+        }{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    ];
+
+    classSelect.addEventListener("change", function () {
+        sectionSelect.innerHTML = "<option value=''>Select Section</option>";
+
+        const selectedClass = this.value;
+
+        classSections.forEach(cs => {
+            if (cs.class_name === selectedClass) {
+                const option = document.createElement("option");
+                option.value = cs.id;
+                option.textContent = cs.section;
+                sectionSelect.appendChild(option);
+            }
+        });
+    });
+
+    // --- PARENT PHONE / NAME LOGIC ---
+    const parentPhoneInput = document.getElementById("parentPhone");
+    const parentNameInput = document.getElementById("parentName");
+
+    const parents = [
+        {% for p in parents %}
+        {
+            id: "{{ p.id }}",
+            phone: "{{ p.phone }}",
+            name: "{{ p.fName }}"
+        }{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    ];
+
+    parentPhoneInput.addEventListener("blur", function () {
+        const phone = this.value.trim();
+
+        const parent = parents.find(p => p.phone === phone);
+
+        if (parent) {
+            parentNameInput.value = parent.name;
+        } else {
+            parentNameInput.value = "";
+        }
+    });
+
+});
+</script>
+
+</body>
+{% include "footer.html" %}
+</html>

@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block title %}Enter Mark{% endblock %}
+{% block n_enter %}active{% endblock %}
+{% block breadcrumb %}
+  <a href="{% url 'marks_list' %}">Marks</a>
+  <span class="bc-sep">›</span>
+  <span class="bc-cur">Enter mark</span>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Enter mark</h1>
+    <p class="page-sub">Record or update a student's exam score — duplicate entries auto-update</p>
+  </div>
+</div>
+
+<div class="card" style="max-width:580px">
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-grid" style="margin-bottom:16px">
+
+        <div class="form-group full">
+          <label>Filter by class</label>
+          <select id="clsFilter" onchange="filterStudents()">
+            <option value="">All classes</option>
+            {% for c in classes %}<option value="{{ c.pk }}">{{ c }}</option>{% endfor %}
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label>Student *</label>
+          <select name="student" id="studentSel" required>
+            <option value="">Select student</option>
+            {% for s in students %}
+            <option value="{{ s.pk }}" data-cls="{{ s.class_section_id }}">{{ s.full_name }} — {{ s.class_section }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Subject *</label>
+          <select name="subject" required>
+            <option value="">Select subject</option>
+            {% for sub in subjects %}<option value="{{ sub.pk }}">{{ sub.name }}</option>{% endfor %}
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Exam type *</label>
+          <select name="exam_type" required>
+            {% for val, lbl in exam_choices %}<option value="{{ val }}">{{ lbl }}</option>{% endfor %}
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Score *</label>
+          <input type="number" name="score" id="score" min="0" placeholder="e.g. 78" required oninput="previewGrade()"/>
+        </div>
+
+        <div class="form-group">
+          <label>Out of (max)</label>
+          <input type="number" name="max_score" id="maxScore" value="100" min="1" oninput="previewGrade()"/>
+        </div>
+
+      </div>
+
+      <!-- Live grade preview -->
+      <div id="preview" style="display:none;padding:12px 14px;border-radius:8px;background:var(--bg);border:1px solid var(--border);margin-bottom:16px">
+        <div style="display:flex;align-items:center;gap:10px;font-size:13px">
+          <span class="muted">Grade preview:</span>
+          <span id="prevBadge" class="badge" style="font-size:13px;padding:4px 14px"></span>
+          <span id="prevPct" class="muted sm"></span>
+        </div>
+      </div>
+
+      <hr/>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Save mark</button>
+        <a href="{% url 'marks_list' %}" class="btn btn-outline">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function filterStudents(){
+  const cls = document.getElementById('clsFilter').value;
+  document.querySelectorAll('#studentSel option').forEach(o=>{
+    if(!o.value) return;
+    o.hidden = cls ? o.dataset.cls !== cls : false;
+  });
+  document.getElementById('studentSel').value = '';
+}
+function previewGrade(){
+  const s = parseFloat(document.getElementById('score').value);
+  const m = parseFloat(document.getElementById('maxScore').value)||100;
+  const p = document.getElementById('preview');
+  if(isNaN(s)){p.style.display='none';return;}
+  p.style.display='block';
+  const pct = Math.round(s/m*1000)/10;
+  let g,cls;
+  if(pct>=90){g='A+';cls='gAp';}else if(pct>=80){g='A';cls='gA';}
+  else if(pct>=70){g='B';cls='gB';}else if(pct>=60){g='C';cls='gC';}
+  else if(pct>=40){g='D';cls='gD';}else{g='F';cls='gF';}
+  const b = document.getElementById('prevBadge');
+  b.textContent=g; b.className='badge '+cls;
+  document.getElementById('prevPct').textContent=pct+'%';
+}
+</script>
+{% endblock %}

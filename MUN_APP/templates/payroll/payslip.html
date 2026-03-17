@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block title %}Payslip — {{ emp.name }}{% endblock %}
+{% block n_emp %}active{% endblock %}
+{% block breadcrumb %}
+  <a href="{% url 'employee_list' %}">Employees</a>
+  <span class="bc-sep">›</span><span class="bc-cur">Payslip</span>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+@media print{
+  .sidebar,.topbar,.page-actions,.no-print{display:none!important}
+  .main{margin-left:0!important}.page{padding:0!important}
+  .card{box-shadow:none!important}
+}
+.sl{display:grid;grid-template-columns:1fr auto;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.sl:last-child{border-bottom:none}
+.sl-l{color:var(--muted)}.sl-v{font-weight:500;text-align:right}
+</style>
+{% endblock %}
+
+{% block topbar_right %}
+<button onclick="window.print()" class="btn btn-primary btn-sm no-print">
+  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.056 48.056 0 011.913-.247m10.5 0a48.536 48.536 0 00-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659"/></svg>
+  Print payslip
+</button>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Payslip</h1>
+    <p class="page-sub">{{ month }}</p>
+  </div>
+  <div class="page-actions no-print">
+    <a href="{% url 'employee_list' %}" class="btn btn-outline btn-sm">← Back</a>
+  </div>
+</div>
+
+<div style="max-width:660px">
+
+  <!-- Header -->
+  <div class="card" style="margin-bottom:12px">
+    <div class="card-body">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:14px;border-bottom:1px solid var(--border);margin-bottom:14px">
+        <div>
+          <div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--accent)">MUN School</div>
+          <div class="muted sm">Payslip for {{ month }}</div>
+        </div>
+        <div style="text-align:right">
+          <div class="muted sm">Employee ID</div>
+          <div style="font-size:15px;font-weight:600;margin-top:2px">{{ emp.employee_id }}</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+        <div>
+          <div class="muted sm" style="margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">Employee</div>
+          <div style="font-size:16px;font-weight:600">{{ emp.name }}</div>
+          <div class="muted sm">{{ emp.designation|default:"Staff" }} · {{ emp.department }}</div>
+          {% if emp.email %}<div class="muted sm">{{ emp.email }}</div>{% endif %}
+        </div>
+        <div>
+          <div class="muted sm" style="margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">Details</div>
+          <div class="sl"><span class="sl-l">Grade</span><span class="sl-v">{{ emp.grade.name|default:"—" }}</span></div>
+          <div class="sl"><span class="sl-l">Type</span><span class="sl-v">{{ emp.employee_type.name|default:"—" }}</span></div>
+          <div class="sl"><span class="sl-l">Joined</span><span class="sl-v">{{ emp.joining_date|default:"—" }}</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Earnings & Deductions side by side -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+
+    <div class="card">
+      <div class="card-header"><span class="card-title" style="color:var(--green)">Earnings</span></div>
+      <div class="card-body">
+        <div class="sl"><span class="sl-l">Basic salary</span><span class="sl-v">₹{{ emp.basic_salary|floatformat:2 }}</span></div>
+        {% if emp.grade %}
+        <div class="sl"><span class="sl-l">HRA ({{ emp.grade.hra_percent }}%)</span><span class="sl-v">₹{% widthratio emp.basic_salary 100 emp.grade.hra_percent %}.00</span></div>
+        <div class="sl"><span class="sl-l">DA ({{ emp.grade.da_percent }}%)</span><span class="sl-v">₹{% widthratio emp.basic_salary 100 emp.grade.da_percent %}.00</span></div>
+        <div class="sl"><span class="sl-l">TA ({{ emp.grade.ta_percent }}%)</span><span class="sl-v">₹{% widthratio emp.basic_salary 100 emp.grade.ta_percent %}.00</span></div>
+        {% endif %}
+        <div style="margin-top:10px;padding-top:10px;border-top:2px solid var(--border);display:flex;justify-content:space-between">
+          <strong>Gross salary</strong>
+          <strong style="color:var(--green)">₹{{ emp.gross_salary|floatformat:2 }}</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title" style="color:var(--red)">Deductions</span></div>
+      <div class="card-body">
+        {% if emp.employee_type %}
+        <div class="sl"><span class="sl-l">Income tax ({{ emp.employee_type.tax_percent }}%)</span><span class="sl-v">₹{% widthratio emp.basic_salary 100 emp.employee_type.tax_percent %}.00</span></div>
+        <div class="sl"><span class="sl-l">PF ({{ emp.employee_type.pf_percent }}%)</span><span class="sl-v">₹{% widthratio emp.basic_salary 100 emp.employee_type.pf_percent %}.00</span></div>
+        {% else %}
+        <div class="sl"><span class="sl-l muted">No deductions</span><span class="sl-v">₹0.00</span></div>
+        {% endif %}
+        <div style="margin-top:10px;padding-top:10px;border-top:2px solid var(--border);display:flex;justify-content:space-between">
+          <strong>Total deductions</strong>
+          <strong style="color:var(--red)">₹{{ emp.total_deductions|floatformat:2 }}</strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Net pay -->
+  <div class="card">
+    <div class="card-body" style="display:flex;align-items:center;justify-content:space-between">
+      <div>
+        <div class="muted sm">Net take-home — {{ month }}</div>
+        <div class="muted sm" style="margin-top:2px">Gross ₹{{ emp.gross_salary|floatformat:2 }} − ₹{{ emp.total_deductions|floatformat:2 }}</div>
+      </div>
+      <div style="font-family:'DM Serif Display',serif;font-size:30px;color:var(--accent)">
+        ₹{{ emp.net_salary|floatformat:2 }}
+      </div>
+    </div>
+  </div>
+
+  <p class="muted sm" style="text-align:center;margin-top:10px">Computer-generated payslip. No signature required.</p>
+</div>
+{% endblock %}

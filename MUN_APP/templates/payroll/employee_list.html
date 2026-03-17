@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Employees{% endblock %}
+{% block n_emp %}active{% endblock %}
+{% block breadcrumb %}
+  <a href="{% url 'payroll_dashboard' %}">Payroll</a>
+  <span class="bc-sep">›</span><span class="bc-cur">Employees</span>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Employees</h1>
+    <p class="page-sub">All active staff members and salary details</p>
+  </div>
+  <div class="page-actions">
+    <a href="{% url 'add_employee' %}" class="btn btn-primary">
+      <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 4.5v15m7.5-7.5h-15"/></svg>
+      Add employee
+    </a>
+  </div>
+</div>
+
+<form method="get">
+  <div class="filter-bar">
+    <input type="text" name="q" value="{{ q }}" placeholder="Search name or ID…"/>
+    <select name="dept" onchange="this.form.submit()">
+      <option value="">All departments</option>
+      {% for d in departments %}<option value="{{ d }}" {% if selected_dept == d %}selected{% endif %}>{{ d }}</option>{% endfor %}
+    </select>
+    <button type="submit" class="btn btn-outline">Search</button>
+    {% if q or selected_dept %}<a href="{% url 'employee_list' %}" class="btn btn-outline">Clear</a>{% endif %}
+  </div>
+</form>
+
+{% if employees %}
+<div style="background:var(--accent);color:#fff;border-radius:var(--r);padding:11px 18px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between">
+  <span class="sm" style="opacity:.85">Monthly net payout (filtered)</span>
+  <span style="font-family:'DM Serif Display',serif;font-size:20px">₹{{ total_payout|floatformat:0 }}</span>
+</div>
+{% endif %}
+
+<div class="card">
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Employee</th><th>ID</th><th>Department</th><th>Designation</th>
+          <th>Grade</th><th>Type</th><th>Basic ₹</th><th>Net ₹</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for e in employees %}
+        <tr>
+          <td>
+            <div style="display:flex;align-items:center;gap:9px">
+              <div style="width:30px;height:30px;border-radius:50%;background:var(--accent-bg);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--accent);flex-shrink:0">
+                {{ e.name|slice:":1" }}
+              </div>
+              <div>
+                <div class="fw5">{{ e.name }}</div>
+                {% if e.email %}<div class="muted sm">{{ e.email }}</div>{% endif %}
+              </div>
+            </div>
+          </td>
+          <td class="muted sm">{{ e.employee_id }}</td>
+          <td>{{ e.department }}</td>
+          <td>{{ e.designation|default:"—" }}</td>
+          <td>{% if e.grade %}<span class="badge bg-blue">{{ e.grade.name }}</span>{% else %}<span class="muted">—</span>{% endif %}</td>
+          <td>{% if e.employee_type %}<span class="badge bg-gray">{{ e.employee_type.name }}</span>{% else %}<span class="muted">—</span>{% endif %}</td>
+          <td>₹{{ e.basic_salary|floatformat:0 }}</td>
+          <td><strong style="color:var(--green)">₹{{ e.net_salary|floatformat:0 }}</strong></td>
+          <td>
+            <div style="display:flex;gap:5px">
+              <a href="{% url 'payslip' e.pk %}" class="btn btn-outline btn-sm">Payslip</a>
+              <a href="{% url 'edit_employee' e.pk %}" class="btn btn-outline btn-sm">Edit</a>
+              <form method="post" action="{% url 'delete_employee' e.pk %}" onsubmit="return confirm('Deactivate {{ e.name }}?')">
+                {% csrf_token %}<button class="btn btn-danger btn-sm" type="submit">Deactivate</button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="9">
+          <div class="empty"><div class="empty-icon">👤</div><p>No employees found.</p></div>
+        </td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

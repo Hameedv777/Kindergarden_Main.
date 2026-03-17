@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Employee Types{% endblock %}
+{% block n_etypes %}active{% endblock %}
+{% block breadcrumb %}
+  <a href="{% url 'payroll_dashboard' %}">Payroll</a>
+  <span class="bc-sep">›</span><span class="bc-cur">Employee types</span>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Employee types</h1>
+    <p class="page-sub">Tax, PF and leave policy per employment category (Permanent, Contract, HM…)</p>
+  </div>
+  <div class="page-actions">
+    <a href="{% url 'add_employee_type' %}" class="btn btn-primary">
+      <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 4.5v15m7.5-7.5h-15"/></svg>
+      Add type
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Type name</th><th>Income tax %</th><th>PF %</th><th>Total deduction %</th><th>Leave days/yr</th><th>Actions</th></tr>
+      </thead>
+      <tbody>
+        {% for t in types %}
+        <tr>
+          <td class="muted sm">{{ forloop.counter }}</td>
+          <td class="fw5">{{ t.name }}</td>
+          <td>{{ t.tax_percent }}%</td>
+          <td>{{ t.pf_percent }}%</td>
+          <td><span class="badge bg-red">{{ t.total_deduction_percent }}%</span></td>
+          <td>{{ t.leave_days }}</td>
+          <td>
+            <div style="display:flex;gap:6px">
+              <a href="{% url 'edit_employee_type' t.pk %}" class="btn btn-outline btn-sm">Edit</a>
+              <form method="post" action="{% url 'delete_employee_type' t.pk %}" onsubmit="return confirm('Delete {{ t.name }}?')">
+                {% csrf_token %}<button class="btn btn-danger btn-sm" type="submit">Delete</button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="7"><div class="empty"><div class="empty-icon">🏷️</div><p>No employee types yet. Add types like Permanent, Contract, HM.</p></div></td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

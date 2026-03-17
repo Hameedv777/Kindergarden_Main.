@@ -1,0 +1,38 @@
+
+<h2>💰 Fee Payment Status</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Student</th>
+        <th>Month</th>
+        <th>Amount</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+
+    {% for f in fees %}
+    <tr>
+        <td>{{ f.student.full_name }}</td>
+        <td>{{ f.fee.month }}</td>
+        <td>₹ {{ f.fee.amount }}</td>
+        <td>{{ f.status }}</td>
+        <td>
+            {% if f.status == "Pending" %}
+            <a href="{% url 'pay_fee' f.id %}">
+                <button>Pay Now</button>
+            </a>
+            {% else %}
+            ✅ Paid
+            {% endif %}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="5">No fee records found</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="{% url 'parent_dashboard' %}">⬅ Back to Dashboard</a>
+{% include "footer.html" %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block n_pgrades %}active{% endblock %}
+{% block breadcrumb %}
+  <a href="{% url 'payroll_dashboard' %}">Payroll</a><span class="bc-sep">›</span>
+  <a href="{% url 'payroll_grade_list' %}">Salary grades</a><span class="bc-sep">›</span>
+  <span class="bc-cur">{{ title }}</span>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">{{ title }}</h1>
+    <p class="page-sub">Allowance percentages are calculated on basic salary</p>
+  </div>
+</div>
+
+<div class="card" style="max-width:500px">
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-grid" style="margin-bottom:14px">
+        <div class="form-group full">
+          <label>Grade name *</label>
+          <input type="text" name="name" value="{{ grade.name|default:'' }}" placeholder="e.g. G3 – Senior Teacher" required/>
+        </div>
+        <div class="form-group">
+          <label>HRA % <span class="muted">(House Rent)</span></label>
+          <input type="number" name="hra_percent" id="hra" value="{{ grade.hra_percent|default:0 }}" step="0.01" min="0" max="100" oninput="updateTotal()"/>
+        </div>
+        <div class="form-group">
+          <label>DA % <span class="muted">(Dearness)</span></label>
+          <input type="number" name="da_percent" id="da" value="{{ grade.da_percent|default:0 }}" step="0.01" min="0" max="100" oninput="updateTotal()"/>
+        </div>
+        <div class="form-group">
+          <label>TA % <span class="muted">(Travel)</span></label>
+          <input type="number" name="ta_percent" id="ta" value="{{ grade.ta_percent|default:0 }}" step="0.01" min="0" max="100" oninput="updateTotal()"/>
+        </div>
+        <div class="form-group">
+          <label>Total allowance</label>
+          <div style="padding:9px 12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;font-weight:600;color:var(--green)" id="tot">0%</div>
+        </div>
+      </div>
+      <hr/>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">{% if editing %}Save changes{% else %}Add grade{% endif %}</button>
+        <a href="{% url 'payroll_grade_list' %}" class="btn btn-outline">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function updateTotal(){
+  const h=parseFloat(document.getElementById('hra').value)||0;
+  const d=parseFloat(document.getElementById('da').value)||0;
+  const t=parseFloat(document.getElementById('ta').value)||0;
+  document.getElementById('tot').textContent=(h+d+t).toFixed(2)+'%';
+}
+updateTotal();
+</script>
+{% endblock %}

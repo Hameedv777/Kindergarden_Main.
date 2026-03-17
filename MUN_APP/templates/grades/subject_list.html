@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Subjects{% endblock %}
+{% block n_subjects %}active{% endblock %}
+{% block breadcrumb %}<span class="bc-cur">Subjects</span>{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Subjects</h1>
+    <p class="page-sub">Manage subjects across all classes</p>
+  </div>
+  <div class="page-actions">
+    <a href="{% url 'add_subject' %}" class="btn btn-primary">
+      <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 4.5v15m7.5-7.5h-15"/></svg>
+      Add subject
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Code</th>
+          <th>Class / Section</th>
+          <th>Max marks</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for s in subjects %}
+        <tr>
+          <td class="muted sm">{{ forloop.counter }}</td>
+          <td class="fw5">{{ s.name }}</td>
+          <td><span class="badge bg-blue">{{ s.code }}</span></td>
+          <td>{{ s.class_section|default:"All classes" }}</td>
+          <td>{{ s.max_marks }}</td>
+          <td>
+            <div style="display:flex;gap:6px">
+              <a href="{% url 'edit_subject' s.pk %}" class="btn btn-outline btn-sm">Edit</a>
+              <form method="post" action="{% url 'delete_subject' s.pk %}" onsubmit="return confirm('Delete {{ s.name }}?')">
+                {% csrf_token %}
+                <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="6">
+          <div class="empty"><div class="empty-icon">📚</div><p>No subjects yet.</p></div>
+        </td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
