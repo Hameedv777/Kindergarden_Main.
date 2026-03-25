@@ -10,8 +10,7 @@ urlpatterns = [
     path('teacher/dashboard/', views.teacherDashboard, name="teacher_dashboard"),
     path('parent/dashboard/', views.parentDashboard, name="parent_dashboard"),
 
-    # path("register/teacher/", views.registerTeacher, name="register_teacher"),
-    # path("register/parent/", views.registerParent, name="register_parent"),
+    # path('register_parent', views.register_parent,name="register_parent"),
 
     # Teacher Features
     path("teacher/students/", views.teacherViewStudents, name="teacher_view_students"),

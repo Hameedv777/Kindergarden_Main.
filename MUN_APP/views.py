@@ -32,7 +32,7 @@ def pay_fee(request, fee_payment_id):
             f"/parent/fee-success/{fee_payment.id}/"
         ),
         cancel_url=request.build_absolute_uri(
-            "/parent/fee-cancel/"
+            "/parent/fees/"
         ),
     )
 
@@ -91,6 +91,8 @@ def fee_success(request, fee_payment_id):
         "parent/fee_success.html",
         {"fee_payment": fee_payment}
     )
+    def fee_cancel(request):
+        return redirect('parent_fees')
 
 
 
