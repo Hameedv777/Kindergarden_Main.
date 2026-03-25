@@ -1,8 +1,6 @@
-static
-
-virt
-
+*.pyc
+__pycache__/
+db.sqlite3
 .env
-
-pycache
-__pycache__
+staticfiles/
+.vscode/

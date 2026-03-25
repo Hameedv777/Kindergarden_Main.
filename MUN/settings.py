@@ -9,29 +9,24 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-import os 
-from pathlib import Path
 
 
 
 
 
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
 
+import os
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
+# Set DEBUG to False for production
+DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-4%^z27bbzpwr)w0lj*s5g&rhrw64=qqe0rozi3dk*go&e04f=_'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-
-
-ALLOWED_HOSTS = [*]
-
+# Allow Render's URL and your local machine
+ALLOWED_HOSTS = [
+    'munappvgd-name.onrender.com', 
+    '127.0.0.1', 
+    'localhost'
+]
 
 # Application definition
 
@@ -53,6 +48,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # <-- Add this line here
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    # ... keep the rest the same
 ]
 
 ROOT_URLCONF = 'MUN.urls'
@@ -74,14 +73,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'MUN.wsgi.application'
+import dj_database_url
+
 DATABASES = {
-
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        # This will use Render's DATABASE_URL environment variable
+        # If it doesn't find one, it defaults to your local SQLite
+        default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3'),
+        conn_max_age=600
+    )
 }
-
 
 
     # Password validation
@@ -117,11 +118,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-STATIC_URL = 'static/'
-STATICFILES_DIRS=[
-    os.path.join(BASE_DIR,'static')
-]
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# Enable WhiteNoise's compression and caching
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
