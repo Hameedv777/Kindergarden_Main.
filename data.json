@@ -1,0 +1,2018 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "attendance"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "classsection"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "event"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "fee"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "feepayment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "homework"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "notice"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "student"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "userregistration"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "employee"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "employeetype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "payrollgrade"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "studentmark"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "MUN_APP",
+    "model": "subject"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2pofys3mwlz7gdc2itp0stwjf0l64arw",
+  "fields": {
+    "session_data": ".eJyrViotTi2Kz0xRsjLSgbCL8nNSlayUChKLUvNKlKCCeYm5IEHHtOLEHKVaAP6YEnA:1w0Ks0:Y94jmzUp6NyQpDR0QkiO5YPehOuaGsmC3KKRw_GkAMg",
+    "expire_date": "2026-03-25T14:49:08.852Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "50uud5lbe9nagyt4l59oeb1d6khz4tmm",
+  "fields": {
+    "session_data": ".eJxVjMEOgjAQRP9lz4S0tBXKTU9e_Aay3V0ElTYpcDL-uyESE26TN2_mDessuRsZWl38ck4vgRYWQRokw04jThs9hytOIgwFdLguQ_efgz6ygPSUuBX8wHhPJaW45DGUm1Lu7VzeEsvrsruHgwHnAVpwWIknqpUx7BujiWo-eaeEdNP3vbLidLANaVcZNmiEg66C91Y564gRPl_Gfkrt:1w2JSV:3ySXrhwsI6Umo3OeXIKfHO_iyoFHJnStsNRtdcYZ-Gs",
+    "expire_date": "2026-03-31T01:42:59.199Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5jvjav6epsjrzf42vdejt91nsa559yjf",
+  "fields": {
+    "session_data": ".eJxVjM0OgjAQhN9lz6TpDxXKTe8-A9lut4JiMS2cjO9uiMSE2-Sbb-YNa-HcjwE6Xf1ynieGDl6YOS2ww4TPDZ5jwQkq6HFdhv4_BXVkHunBaSvCHdNtFjSnJY9ebIrY2yKuc-DpsruHgwHLAB1Y1OyIGmlMcK1RRE04OSuZVBtjlDVb5euWlNUmGDQcvNLeuVra2lJA-HwBmsZJnA:1w2Qnm:lf1zbuZ1Z0oJtZ1IpRrGG6voILonGjKwQfqoHOQtMQU",
+    "expire_date": "2026-03-31T09:33:26.016Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "aabmafpe22mxfy7ho479r6en158ig293",
+  "fields": {
+    "session_data": ".eJyrViotTi2Kz0xRsjLSgbCL8nNSlayUChKLUvNKlKCCeYm5IEHHtOLEHKVaAP6YEnA:1w2NVy:MdJpsctXfIbSBMaaEYkuN1oXjGZueHYJrSJpqH_-_8A",
+    "expire_date": "2026-03-31T06:02:50.566Z"
+  }
+},
+{
+  "model": "MUN_APP.userregistration",
+  "pk": 1,
+  "fields": {
+    "fName": "AbHameed",
+    "phone": "9846598687",
+    "email": "hameed@gmail.com",
+    "parent_address": null,
+    "password": "12345",
+    "role": "teacher"
+  }
+},
+{
+  "model": "MUN_APP.userregistration",
+  "pk": 2,
+  "fields": {
+    "fName": "Afsal",
+    "phone": "8113044022",
+    "email": "afsal@gmail.com",
+    "parent_address": null,
+    "password": "12345",
+    "role": "parent"
+  }
+},
+{
+  "model": "MUN_APP.userregistration",
+  "pk": 3,
+  "fields": {
+    "fName": "Anas",
+    "phone": "9747598687",
+    "email": "anas@gmail.com",
+    "parent_address": null,
+    "password": "12345",
+    "role": "parent"
+  }
+},
+{
+  "model": "MUN_APP.userregistration",
+  "pk": 4,
+  "fields": {
+    "fName": "Jishnu",
+    "phone": "8943650987",
+    "email": "jishnu@gmail.com",
+    "parent_address": null,
+    "password": "12345",
+    "role": "parent"
+  }
+},
+{
+  "model": "MUN_APP.userregistration",
+  "pk": 5,
+  "fields": {
+    "fName": "Razack",
+    "phone": "9741123456",
+    "email": "razack@gmail.com",
+    "parent_address": null,
+    "password": "123456",
+    "role": "parent"
+  }
+},
+{
+  "model": "MUN_APP.userregistration",
+  "pk": 6,
+  "fields": {
+    "fName": "Naser",
+    "phone": "97475043",
+    "email": "naser@mun.com",
+    "parent_address": null,
+    "password": "123456",
+    "role": "parent"
+  }
+},
+{
+  "model": "MUN_APP.userregistration",
+  "pk": 7,
+  "fields": {
+    "fName": "Amjath",
+    "phone": "989649001",
+    "email": "amjath@gmail.com",
+    "parent_address": "",
+    "password": "123456",
+    "role": "teacher"
+  }
+},
+{
+  "model": "MUN_APP.classsection",
+  "pk": 1,
+  "fields": {
+    "class_name": "LKG",
+    "section": "A"
+  }
+},
+{
+  "model": "MUN_APP.classsection",
+  "pk": 2,
+  "fields": {
+    "class_name": "LKG",
+    "section": "B"
+  }
+},
+{
+  "model": "MUN_APP.classsection",
+  "pk": 3,
+  "fields": {
+    "class_name": "UKG",
+    "section": "A"
+  }
+},
+{
+  "model": "MUN_APP.classsection",
+  "pk": 4,
+  "fields": {
+    "class_name": "UKG",
+    "section": "B"
+  }
+},
+{
+  "model": "MUN_APP.student",
+  "pk": 1,
+  "fields": {
+    "full_name": "Haimi",
+    "dob": "2019-07-27",
+    "admission_no": "ADM001",
+    "parent": 2,
+    "class_section": 1,
+    "address": null
+  }
+},
+{
+  "model": "MUN_APP.student",
+  "pk": 2,
+  "fields": {
+    "full_name": "ewan",
+    "dob": "2022-05-12",
+    "admission_no": "ADM002",
+    "parent": 2,
+    "class_section": 1,
+    "address": null
+  }
+},
+{
+  "model": "MUN_APP.student",
+  "pk": 3,
+  "fields": {
+    "full_name": "Surya",
+    "dob": "2021-09-18",
+    "admission_no": "ADM003",
+    "parent": 4,
+    "class_section": 2,
+    "address": null
+  }
+},
+{
+  "model": "MUN_APP.student",
+  "pk": 4,
+  "fields": {
+    "full_name": "Karthik",
+    "dob": "2021-03-22",
+    "admission_no": "ADM004",
+    "parent": 4,
+    "class_section": 4,
+    "address": null
+  }
+},
+{
+  "model": "MUN_APP.student",
+  "pk": 5,
+  "fields": {
+    "full_name": "Adhul",
+    "dob": "2023-05-19",
+    "admission_no": "ADM005",
+    "parent": 3,
+    "class_section": 4,
+    "address": null
+  }
+},
+{
+  "model": "MUN_APP.student",
+  "pk": 6,
+  "fields": {
+    "full_name": "Heza",
+    "dob": "2021-09-12",
+    "admission_no": "ADM006",
+    "parent": 5,
+    "class_section": 1,
+    "address": null
+  }
+},
+{
+  "model": "MUN_APP.student",
+  "pk": 7,
+  "fields": {
+    "full_name": "Ayra",
+    "dob": "2023-05-12",
+    "admission_no": "ADM007",
+    "parent": 2,
+    "class_section": 3,
+    "address": null
+  }
+},
+{
+  "model": "MUN_APP.student",
+  "pk": 8,
+  "fields": {
+    "full_name": "Jafer",
+    "dob": "2023-10-22",
+    "admission_no": "ADM008",
+    "parent": 3,
+    "class_section": 2,
+    "address": null
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 1,
+  "fields": {
+    "student": 1,
+    "date": "2026-03-09",
+    "status": "Present"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 2,
+  "fields": {
+    "student": 2,
+    "date": "2026-03-09",
+    "status": "Present"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 3,
+  "fields": {
+    "student": 4,
+    "date": "2026-03-09",
+    "status": "Present"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 4,
+  "fields": {
+    "student": 5,
+    "date": "2026-03-09",
+    "status": "Absent"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 5,
+  "fields": {
+    "student": 3,
+    "date": "2026-03-09",
+    "status": "Present"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 6,
+  "fields": {
+    "student": 6,
+    "date": "2026-03-09",
+    "status": "Absent"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 7,
+  "fields": {
+    "student": 4,
+    "date": "2026-03-10",
+    "status": "Absent"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 8,
+  "fields": {
+    "student": 5,
+    "date": "2026-03-10",
+    "status": "Present"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 9,
+  "fields": {
+    "student": 3,
+    "date": "2026-03-10",
+    "status": "Present"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 10,
+  "fields": {
+    "student": 7,
+    "date": "2026-03-10",
+    "status": "Present"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 11,
+  "fields": {
+    "student": 3,
+    "date": "2026-03-17",
+    "status": "Present"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 12,
+  "fields": {
+    "student": 8,
+    "date": "2026-03-17",
+    "status": "Present"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 13,
+  "fields": {
+    "student": 1,
+    "date": "2026-03-24",
+    "status": "Absent"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 14,
+  "fields": {
+    "student": 2,
+    "date": "2026-03-24",
+    "status": "Present"
+  }
+},
+{
+  "model": "MUN_APP.attendance",
+  "pk": 15,
+  "fields": {
+    "student": 6,
+    "date": "2026-03-24",
+    "status": "Present"
+  }
+},
+{
+  "model": "MUN_APP.fee",
+  "pk": 1,
+  "fields": {
+    "class_section": 1,
+    "month": "March",
+    "amount": "200.00"
+  }
+},
+{
+  "model": "MUN_APP.fee",
+  "pk": 2,
+  "fields": {
+    "class_section": 1,
+    "month": "Exam fee",
+    "amount": "300.00"
+  }
+},
+{
+  "model": "MUN_APP.fee",
+  "pk": 3,
+  "fields": {
+    "class_section": 3,
+    "month": "Exam fee",
+    "amount": "300.00"
+  }
+},
+{
+  "model": "MUN_APP.fee",
+  "pk": 4,
+  "fields": {
+    "class_section": 1,
+    "month": "Monthly Fee March",
+    "amount": "500.00"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 1,
+  "fields": {
+    "student": 1,
+    "fee": 1,
+    "stripe_session_id": "cs_test_a1Hqt25vVnWOQ3jwfBK1t5iup56yn97NYNZglISEREjmCZHaxUXIajYn3x",
+    "paid_on": "2026-03-09",
+    "status": "Paid"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 2,
+  "fields": {
+    "student": 2,
+    "fee": 1,
+    "stripe_session_id": null,
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 3,
+  "fields": {
+    "student": 3,
+    "fee": 1,
+    "stripe_session_id": "cs_test_a1XEvkTosK03hWLK5Y7oVikhU7TOr6EeCNhhFOeznlkOye7rLdBinE5QQr",
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 4,
+  "fields": {
+    "student": 1,
+    "fee": 2,
+    "stripe_session_id": "cs_test_a1nDFsqDsdlJlMOOtaNMVTR5zxn8WTqRhG9vv3xrkRuZy5mcVBWdIXP0cd",
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 5,
+  "fields": {
+    "student": 2,
+    "fee": 2,
+    "stripe_session_id": null,
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 6,
+  "fields": {
+    "student": 6,
+    "fee": 2,
+    "stripe_session_id": "cs_test_a1YAPtw7McHOmPIVWBuFWUTrk49ZHRcGWZjAkEkQtNjPTUorhqgLcBwVk8",
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 7,
+  "fields": {
+    "student": 3,
+    "fee": 2,
+    "stripe_session_id": null,
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 8,
+  "fields": {
+    "student": 4,
+    "fee": 3,
+    "stripe_session_id": null,
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 9,
+  "fields": {
+    "student": 5,
+    "fee": 3,
+    "stripe_session_id": "cs_test_a1laYZFVIbVpYseMwmiE19BzVEwDLpHTdXlEKGpwDk4FcQSxztIuhtCvBq",
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 10,
+  "fields": {
+    "student": 1,
+    "fee": 4,
+    "stripe_session_id": null,
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 11,
+  "fields": {
+    "student": 2,
+    "fee": 4,
+    "stripe_session_id": null,
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 12,
+  "fields": {
+    "student": 6,
+    "fee": 4,
+    "stripe_session_id": null,
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 13,
+  "fields": {
+    "student": 3,
+    "fee": 4,
+    "stripe_session_id": null,
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.feepayment",
+  "pk": 14,
+  "fields": {
+    "student": 8,
+    "fee": 4,
+    "stripe_session_id": null,
+    "paid_on": null,
+    "status": "Pending"
+  }
+},
+{
+  "model": "MUN_APP.homework",
+  "pk": 1,
+  "fields": {
+    "class_section": 1,
+    "title": "Poem Writing",
+    "description": "Write the poem twinkil ",
+    "date": "2026-03-09"
+  }
+},
+{
+  "model": "MUN_APP.homework",
+  "pk": 2,
+  "fields": {
+    "class_section": 1,
+    "title": "Poem Writing",
+    "description": "Write the poem twinkil ",
+    "date": "2026-03-09"
+  }
+},
+{
+  "model": "MUN_APP.homework",
+  "pk": 3,
+  "fields": {
+    "class_section": 4,
+    "title": "Maths Number count",
+    "description": "Count Numbers",
+    "date": "2026-03-09"
+  }
+},
+{
+  "model": "MUN_APP.homework",
+  "pk": 4,
+  "fields": {
+    "class_section": 4,
+    "title": "Arrange the number Ascending  order",
+    "description": "100,75,105,,200,17,25",
+    "date": "2026-03-11"
+  }
+},
+{
+  "model": "MUN_APP.homework",
+  "pk": 5,
+  "fields": {
+    "class_section": 1,
+    "title": "Malayalam poem write",
+    "description": "Write any malayalam poem",
+    "date": "2026-03-17"
+  }
+},
+{
+  "model": "MUN_APP.homework",
+  "pk": 6,
+  "fields": {
+    "class_section": 1,
+    "title": "Malayalam poem write",
+    "description": "Write any malayaylam poem\r\n",
+    "date": "2026-03-17"
+  }
+},
+{
+  "model": "MUN_APP.homework",
+  "pk": 7,
+  "fields": {
+    "class_section": 1,
+    "title": "Malayalam poem write",
+    "description": "Write poem ",
+    "date": "2026-03-17"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user registration",
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "codename": "add_userregistration"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user registration",
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "codename": "change_userregistration"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user registration",
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "codename": "delete_userregistration"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user registration",
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "codename": "view_userregistration"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add class section",
+    "content_type": [
+      "MUN_APP",
+      "classsection"
+    ],
+    "codename": "add_classsection"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change class section",
+    "content_type": [
+      "MUN_APP",
+      "classsection"
+    ],
+    "codename": "change_classsection"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete class section",
+    "content_type": [
+      "MUN_APP",
+      "classsection"
+    ],
+    "codename": "delete_classsection"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view class section",
+    "content_type": [
+      "MUN_APP",
+      "classsection"
+    ],
+    "codename": "view_classsection"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add event",
+    "content_type": [
+      "MUN_APP",
+      "event"
+    ],
+    "codename": "add_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change event",
+    "content_type": [
+      "MUN_APP",
+      "event"
+    ],
+    "codename": "change_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete event",
+    "content_type": [
+      "MUN_APP",
+      "event"
+    ],
+    "codename": "delete_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view event",
+    "content_type": [
+      "MUN_APP",
+      "event"
+    ],
+    "codename": "view_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add notice",
+    "content_type": [
+      "MUN_APP",
+      "notice"
+    ],
+    "codename": "add_notice"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change notice",
+    "content_type": [
+      "MUN_APP",
+      "notice"
+    ],
+    "codename": "change_notice"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete notice",
+    "content_type": [
+      "MUN_APP",
+      "notice"
+    ],
+    "codename": "delete_notice"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view notice",
+    "content_type": [
+      "MUN_APP",
+      "notice"
+    ],
+    "codename": "view_notice"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add fee",
+    "content_type": [
+      "MUN_APP",
+      "fee"
+    ],
+    "codename": "add_fee"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change fee",
+    "content_type": [
+      "MUN_APP",
+      "fee"
+    ],
+    "codename": "change_fee"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete fee",
+    "content_type": [
+      "MUN_APP",
+      "fee"
+    ],
+    "codename": "delete_fee"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view fee",
+    "content_type": [
+      "MUN_APP",
+      "fee"
+    ],
+    "codename": "view_fee"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add student",
+    "content_type": [
+      "MUN_APP",
+      "student"
+    ],
+    "codename": "add_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change student",
+    "content_type": [
+      "MUN_APP",
+      "student"
+    ],
+    "codename": "change_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete student",
+    "content_type": [
+      "MUN_APP",
+      "student"
+    ],
+    "codename": "delete_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view student",
+    "content_type": [
+      "MUN_APP",
+      "student"
+    ],
+    "codename": "view_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add fee payment",
+    "content_type": [
+      "MUN_APP",
+      "feepayment"
+    ],
+    "codename": "add_feepayment"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change fee payment",
+    "content_type": [
+      "MUN_APP",
+      "feepayment"
+    ],
+    "codename": "change_feepayment"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete fee payment",
+    "content_type": [
+      "MUN_APP",
+      "feepayment"
+    ],
+    "codename": "delete_feepayment"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view fee payment",
+    "content_type": [
+      "MUN_APP",
+      "feepayment"
+    ],
+    "codename": "view_feepayment"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add attendance",
+    "content_type": [
+      "MUN_APP",
+      "attendance"
+    ],
+    "codename": "add_attendance"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change attendance",
+    "content_type": [
+      "MUN_APP",
+      "attendance"
+    ],
+    "codename": "change_attendance"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete attendance",
+    "content_type": [
+      "MUN_APP",
+      "attendance"
+    ],
+    "codename": "delete_attendance"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view attendance",
+    "content_type": [
+      "MUN_APP",
+      "attendance"
+    ],
+    "codename": "view_attendance"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add homework",
+    "content_type": [
+      "MUN_APP",
+      "homework"
+    ],
+    "codename": "add_homework"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change homework",
+    "content_type": [
+      "MUN_APP",
+      "homework"
+    ],
+    "codename": "change_homework"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete homework",
+    "content_type": [
+      "MUN_APP",
+      "homework"
+    ],
+    "codename": "delete_homework"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view homework",
+    "content_type": [
+      "MUN_APP",
+      "homework"
+    ],
+    "codename": "view_homework"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add employee type",
+    "content_type": [
+      "MUN_APP",
+      "employeetype"
+    ],
+    "codename": "add_employeetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change employee type",
+    "content_type": [
+      "MUN_APP",
+      "employeetype"
+    ],
+    "codename": "change_employeetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete employee type",
+    "content_type": [
+      "MUN_APP",
+      "employeetype"
+    ],
+    "codename": "delete_employeetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view employee type",
+    "content_type": [
+      "MUN_APP",
+      "employeetype"
+    ],
+    "codename": "view_employeetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add payroll grade",
+    "content_type": [
+      "MUN_APP",
+      "payrollgrade"
+    ],
+    "codename": "add_payrollgrade"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change payroll grade",
+    "content_type": [
+      "MUN_APP",
+      "payrollgrade"
+    ],
+    "codename": "change_payrollgrade"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete payroll grade",
+    "content_type": [
+      "MUN_APP",
+      "payrollgrade"
+    ],
+    "codename": "delete_payrollgrade"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view payroll grade",
+    "content_type": [
+      "MUN_APP",
+      "payrollgrade"
+    ],
+    "codename": "view_payrollgrade"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add employee",
+    "content_type": [
+      "MUN_APP",
+      "employee"
+    ],
+    "codename": "add_employee"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change employee",
+    "content_type": [
+      "MUN_APP",
+      "employee"
+    ],
+    "codename": "change_employee"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete employee",
+    "content_type": [
+      "MUN_APP",
+      "employee"
+    ],
+    "codename": "delete_employee"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view employee",
+    "content_type": [
+      "MUN_APP",
+      "employee"
+    ],
+    "codename": "view_employee"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add subject",
+    "content_type": [
+      "MUN_APP",
+      "subject"
+    ],
+    "codename": "add_subject"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change subject",
+    "content_type": [
+      "MUN_APP",
+      "subject"
+    ],
+    "codename": "change_subject"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete subject",
+    "content_type": [
+      "MUN_APP",
+      "subject"
+    ],
+    "codename": "delete_subject"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view subject",
+    "content_type": [
+      "MUN_APP",
+      "subject"
+    ],
+    "codename": "view_subject"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add student mark",
+    "content_type": [
+      "MUN_APP",
+      "studentmark"
+    ],
+    "codename": "add_studentmark"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change student mark",
+    "content_type": [
+      "MUN_APP",
+      "studentmark"
+    ],
+    "codename": "change_studentmark"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete student mark",
+    "content_type": [
+      "MUN_APP",
+      "studentmark"
+    ],
+    "codename": "delete_studentmark"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view student mark",
+    "content_type": [
+      "MUN_APP",
+      "studentmark"
+    ],
+    "codename": "view_studentmark"
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$0Y72aukwHKAbHkYusvlGXN$teCEBDNVwS7eevNMAk0itzN0Z63Q6TCFD6OTqjy3fJI=",
+    "last_login": "2026-03-17T09:33:26.003Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-09T01:21:05.793Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Vd1TEZTBOAJYEZeYUYESZi$7+hugsdlsCEHZRoUSEszQgAWHeuW8Km2uSpe20SGWr0=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "babu",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-16T17:27:21.529Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$AxPnkvk6WGROH0dk7BnMXw$CTj0hTk/FzVxi99yvYd07fL5DPmbhQMvJXhS6rdWPng=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "babuvgd",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-26T03:27:41.251Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-03-09T01:23:40.717Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "1",
+    "object_repr": "AbHameed",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-03-09T01:24:45.977Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "2",
+    "object_repr": "Afsal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-03-09T01:25:35.382Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "3",
+    "object_repr": "Anas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-03-09T01:46:28.148Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "classsection"
+    ],
+    "object_id": "1",
+    "object_repr": "LKG - A",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-03-09T01:46:45.863Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "classsection"
+    ],
+    "object_id": "2",
+    "object_repr": "LKG - B",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-03-09T01:47:01.424Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "classsection"
+    ],
+    "object_id": "3",
+    "object_repr": "UKG - A",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-03-09T01:47:18.383Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "classsection"
+    ],
+    "object_id": "4",
+    "object_repr": "UKG - B",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-03-09T02:59:13.258Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "3",
+    "object_repr": "Anas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-03-09T03:01:01.036Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "4",
+    "object_repr": "Jishnu",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-03-09T06:02:10.358Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "3",
+    "object_repr": "Anas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-03-09T06:07:14.112Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "5",
+    "object_repr": "Razack",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-03-16T17:30:22.089Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "1",
+    "object_repr": "AbHameed",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-03-17T01:29:19.774Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "5",
+    "object_repr": "Razack",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-03-17T01:29:31.474Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "4",
+    "object_repr": "Jishnu",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-03-17T01:29:40.144Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "3",
+    "object_repr": "Anas",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-03-17T06:34:32.475Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "6",
+    "object_repr": "Naser",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-03-17T09:36:25.771Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "MUN_APP",
+      "userregistration"
+    ],
+    "object_id": "7",
+    "object_repr": "Amjath",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]
