@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'MUN.wsgi.application'
 # 4. Database Configuration
 # Automatically switches between Railway/Render DB and local SQLit
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL')
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=os.environ.get('DATABASE_URL')
+#     )
+# }
 
 # 5. Static & Media Files
 STATIC_URL = '/static/'
