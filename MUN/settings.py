@@ -10,6 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load environment variables from .env file if it exists
 load_dotenv(os.path.join(BASE_DIR, '.env'))
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-fallback-key-change-me')
 
 # 2. Security Settings
 # Use an environment variable for the secret key, with a fallback for local dev
@@ -18,7 +19,7 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = [
-    'munappvgd-name.onrender.com', # Your Render URL
+    'your-actual-app-name.onrender.com', # Your Render URL
     '127.0.0.1', 
     'localhost',
     '.railway.app',                # Allows all Railway subdomains
