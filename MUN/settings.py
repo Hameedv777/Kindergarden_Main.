@@ -58,8 +58,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Must be here
+    # ..
+
 ]
 
+
+
+    
 ROOT_URLCONF = 'MUN.urls'
 
 TEMPLATES = [
@@ -91,9 +98,9 @@ WSGI_APPLICATION = 'MUN.wsgi.application'
 
 # 5. Static & Media Files
 STATIC_URL = '/static/'
+# settings.py
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Enable WhiteNoise compression
 STORAGES = {
     "staticfiles": {
