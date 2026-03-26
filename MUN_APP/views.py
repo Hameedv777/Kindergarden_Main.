@@ -189,7 +189,7 @@ def teacherViewStudents(request):
         return redirect('login')
 
     students = Student.objects.all()
-    return render(request, "teacher\students.html", {"students": students})
+    return render(request, "teacher/students.html", {"students": students})
 
 
 def teacherAttendanceSelect(request):
