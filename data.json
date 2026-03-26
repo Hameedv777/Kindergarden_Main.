@@ -172,6 +172,14 @@
   }
 },
 {
+  "model": "sessions.session",
+  "pk": "bn410hfrhg6ht71lza59jdej089g50wj",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQAP9lz6ahD2jL0bvf0OxutxY1kFA4Gf_dkHDQ68xk3pBw32ram6xpyjCCg8svI-SnzIfID5zvi-Jl3taJ1JGo0zZ1W7K8rmf7N6jYKoxgQ-gNakbx2ls2Edn4AUMMZIjyEC0XJ653SB2huCDWls6w7mPhkg18vuaNOGA:1w5kML:tYAUrDiRL5n1MYxw9vOXXPdjJvYiJ9oBeKyFRcMQbb0",
+    "expire_date": "2026-04-09T13:02:49.767Z"
+  }
+},
+{
   "model": "MUN_APP.userregistration",
   "pk": 1,
   "fields": {
@@ -1661,7 +1669,7 @@
 {
   "model": "auth.user",
   "fields": {
-    "password": "pbkdf2_sha256$1200000$0Y72aukwHKAbHkYusvlGXN$teCEBDNVwS7eevNMAk0itzN0Z63Q6TCFD6OTqjy3fJI=",
+    "password": "pbkdf2_sha256$1200000$u2H4HNbFaTTQQOHBbnfsrB$JMXz8E7cSUDcxaH/mGuwFgKLyof3FbreG03sntVz5ig=",
     "last_login": "2026-03-17T09:33:26.003Z",
     "is_superuser": true,
     "username": "admin",
@@ -1705,6 +1713,23 @@
     "is_staff": true,
     "is_active": true,
     "date_joined": "2026-03-26T03:27:41.251Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$1o56g1Zuas6PBc618D6L0Y$AulujP8ByX/OgDAnyf0Iwu9cQWmjH5kC7cp3+l7MQrw=",
+    "last_login": "2026-03-26T13:01:16.724Z",
+    "is_superuser": true,
+    "username": "hameed",
+    "first_name": "",
+    "last_name": "",
+    "email": "hameed@vly.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-26T12:57:51.510Z",
     "groups": [],
     "user_permissions": []
   }
@@ -2013,6 +2038,42 @@
     "object_repr": "Amjath",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-03-26T13:02:28.468Z",
+    "user": [
+      "hameed"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-03-26T13:02:49.742Z",
+    "user": [
+      "hameed"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
   }
 }
 ]
