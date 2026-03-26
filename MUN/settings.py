@@ -13,7 +13,6 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 # 2. Security Settings
 # Use an environment variable for the secret key, with a fallback for local dev
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-4%^z27bbzpwr)w0lj*s5g&rhrw64=qqe0rozi3dk*go&e04f=_')
 
 # DEBUG should be False in production
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
