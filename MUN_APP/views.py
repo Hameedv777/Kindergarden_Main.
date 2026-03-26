@@ -182,16 +182,12 @@ def teacherDashboard(request):
 
     name = request.session.get('user_name')
     return render(request, "teacher/teacher_dashboard.html", {"name": name})
-
-
 def teacherViewStudents(request):
     if request.session.get('user_role') != 'teacher':
         return redirect('login')
 
     students = Student.objects.all()
- return render(request, "teacher/student_detail.html", context)
-return render(request, "teacher/dashboard.html", context)
-
+    return render(request, "teacher/students.html", {"students": students})
 def teacherAttendanceSelect(request):
     if request.session.get('user_role') != 'teacher':
         return redirect('login')
