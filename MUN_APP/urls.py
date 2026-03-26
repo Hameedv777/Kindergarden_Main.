@@ -31,6 +31,10 @@ urlpatterns = [
     path("parent/fee-success/<int:fee_payment_id>/",views.fee_success,name="fee_success"),
 
     path('teacher/add-fee/', views.addFee, name='add_fee'),
+    path('students/<int:student_id>/edit/', views.edit_student, name='edit_student'),
+path('students/list/', views.student_list, name='student_list'),
+
+path('get-key/', views.get_key, name='get_key'),
 
 
 

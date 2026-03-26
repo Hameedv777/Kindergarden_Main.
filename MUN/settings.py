@@ -17,6 +17,10 @@ ALLOWED_HOSTS = [
     'localhost',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://kindergarden-main-2.onrender.com",
+]
+
 db_from_env = dj_database_url.config(conn_max_age=600)
 
 if db_from_env:
@@ -38,6 +42,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'MUN_APP',
+    'corsheaders',  
 ]
 
 MIDDLEWARE = [
@@ -49,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'MUN.urls'

@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.utils import timezone
 from .models import userRegistration, Student, ClassSection, Attendance, Homework, FeePayment, Fee
 
+from django.http import JsonResponse
 
 
 from django.conf import settings
@@ -377,4 +378,45 @@ def parent_fees(request):
         {"fee_payments": fee_payments}
     )
 
+
+
+def get_key(request):
+    response = requests.get('https://extensions.aitopia.ai/extensions/app/get_key')
+    return JsonResponse(response.json(), status=response.status_code)
+
+
+
+
+
+    import json
+from django.http import JsonResponse
+from django.views.decorators.http import require_POST
+from .models import Student
+
+@require_POST
+def edit_student(request, student_id):
+    try:
+        student = Student.objects.get(id=student_id)
+        student.admission_no = request.POST.get('admission_no', student.admission_no)
+        student.full_name = request.POST.get('full_name', student.full_name)
+        student.dob = request.POST.get('dob', student.dob)
+        student.class_section = request.POST.get('class_section', student.class_section)
+        student.parent.fName = request.POST.get('parent_name', student.parent.fName)
+        student.parent.phone = request.POST.get('parent_phone', student.parent.phone)
+        student.parent.save()
+        student.save()
+        return JsonResponse({'status': 'ok'})
+    except Student.DoesNotExist:
+        return JsonResponse({'error': 'Student not found'}, status=404)
+
+def student_list(request):
+    students = Student.objects.select_related('parent').all()
+    data = [{
+        'admission_no': s.admission_no,
+        'full_name': s.full_name,
+        'class_section': s.class_section,
+        'parent_name': s.parent.fName,
+        'parent_phone': s.parent.phone,
+    } for s in students]
+    return JsonResponse({'students': data})
 
