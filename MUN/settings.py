@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 import dj_database_url
 from dotenv import load_dotenv
+import dj_database_url
 
 # 1. Base Directory Definition
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -67,11 +68,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'MUN.wsgi.application'
 
 # 4. Database Configuration
-# Automatically switches between Railway/Render DB and local SQLite
+# Automatically switches between Railway/Render DB and local SQLit
+
 DATABASES = {
     'default': dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
-        conn_max_age=600
+        default=os.environ.get('DATABASE_URL')
     )
 }
 
