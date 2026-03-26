@@ -12,7 +12,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-change-me')
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = [
-    'YOUR-ACTUAL-APP.onrender.com',
+    'kindergarden-main-2.onrender.com',
     '127.0.0.1',
     'localhost',
 ]
