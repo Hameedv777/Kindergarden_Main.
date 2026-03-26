@@ -1,8 +1,9 @@
+import dj_database_url
+
 import os
 from pathlib import Path
-import dj_database_url
 from dotenv import load_dotenv
-import dj_database_url
+
 
 # 1. Base Directory Definition
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,6 +24,19 @@ ALLOWED_HOSTS = [
     'localhost',
     '.railway.app',                # Allows all Railway subdomains
 ]
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+
+if db_from_env:
+    DATABASES = {'default': db_from_env}
+    print("--> Using Production Database (DATABASE_URL)")
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 # 3. Application Definition
 INSTALLED_APPS = [
